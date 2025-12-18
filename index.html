@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UTF-8 Visualizer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .input-container {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        #textInput {
+            width: 100%;
+            max-width: 600px;
+            padding: 12px;
+            font-size: 20px;
+            border: 2px solid #4CAF50;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .char-count {
+            margin-top: 5px;
+            font-size: 14px;
+            color: #666;
+        }
+
+        #outputTable {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        #outputTable td {
+            border: 1px solid #ddd;
+            padding: 15px;
+            text-align: center;
+            font-size: 24px;
+            min-width: 60px;
+        }
+
+        .char-row {
+            background-color: #f9f9f9;
+            font-weight: bold;
+        }
+
+        .utf-row {
+            background-color: #e8f5e9;
+            font-family: 'Courier New', monospace;
+            color: #2e7d32;
+        }
+
+        .entity-row {
+            background-color: #e3f2fd;
+            font-family: 'Courier New', monospace;
+            color: #1565c0;
+            font-size: 18px;
+        }
+
+        .empty-message {
+            text-align: center;
+            padding: 40px;
+            color: #999;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <h1>UTF-8 Character Visualizer</h1>
+    
+    <div class="input-container">
+        <input 
+            type="text" 
+            id="textInput" 
+            maxlength="30" 
+            placeholder="Enter text (up to 30 characters)..."
+            autocomplete="off"
+        >
+        <div class="char-count" id="charCount">0 / 30 characters</div>
+    </div>
+
+    <table id="outputTable">
+        <tbody id="tableBody">
+            <tr>
+                <td colspan="100" class="empty-message">Enter text above to see UTF-8 codes</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script src="script.js"></script>
+</body>
+</html>
