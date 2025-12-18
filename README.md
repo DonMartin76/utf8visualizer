@@ -2,6 +2,8 @@
 
 A simple web tool that displays UTF-8 codes and HTML entities for any text input.
 
+![Screenshot](screenshot.png)
+
 ## Usage
 
 Open `index.html` in your browser, or visit the live site at: https://donmartin76.github.io/utf8visualizer
