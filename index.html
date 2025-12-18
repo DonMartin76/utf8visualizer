@@ -73,11 +73,32 @@
             font-size: 18px;
         }
 
+        .named-entity-row td {
+            background-color: #fff3e0;
+            font-family: 'Courier New', monospace;
+            color: #e65100;
+            font-size: 18px;
+        }
+
         .empty-message {
             text-align: center;
             padding: 40px;
             color: #999;
             font-size: 18px;
+        }
+
+        .footnote {
+            margin-top: 30px;
+            padding: 15px;
+            background-color: #fff;
+            border-left: 4px solid #4CAF50;
+            font-size: 14px;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .footnote strong {
+            color: #333;
         }
     </style>
 </head>
@@ -102,6 +123,13 @@
             </tr>
         </tbody>
     </table>
+
+    <div class="footnote">
+        <strong>Note:</strong> Some emojis may appear in multiple cells because they consist of multiple Unicode code points. 
+        For example, ❤️ is actually two code points: the heart character (U+2764) and a variation selector (U+FE0F). 
+        This tool shows the actual UTF-8 structure at the code point level. Cells marked with * represent invisible 
+        modifiers like variation selectors, skin tone modifiers, or zero-width joiners.
+    </div>
 
     <script src="script.js"></script>
 </body>
