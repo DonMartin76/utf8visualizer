@@ -15,7 +15,10 @@ function getUtf8Codes(char) {
 // Function to update the table display
 function updateDisplay() {
     const text = textInput.value;
-    const length = text.length;
+    
+    // Use Array.from or spread operator to properly handle multi-byte characters like emojis
+    const characters = Array.from(text);
+    const length = characters.length;
     
     // Update character count
     charCount.textContent = `${length} / 30 characters`;
@@ -49,7 +52,7 @@ function updateDisplay() {
     
     // Process each character
     for (let i = 0; i < length; i++) {
-        const char = text[i];
+        const char = characters[i];
         
         // Character cell
         const charCell = document.createElement('td');
